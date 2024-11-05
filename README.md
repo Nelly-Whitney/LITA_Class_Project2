@@ -1,14 +1,35 @@
 # LITA_Class_Project2
 Documentation of my class projects while learning Data Analysis with Incubator Hub
-## PROJECTS: LITA_Capstone_Project
+## PROJECT: LITA_Capstone_Project
 ### Project 2
 ### Outline
+[Project Title](#Project-Title)
 
+[Project Overview](#Project-Overview)
 
+[Goals](#Goals)
 
+[Data Sources](#Data-Sources)
+
+[Tools Used](#Tools-Used)
+
+[Data Overview](#Data-Overview)
+
+[Data Cleaning and Preparation](#Data-Cleaning-and-Preparation)
+
+[Exploratory Data Analysis](#Exploratory-Data-Anaysis)
+
+[Data Analysis](#Data-Analysis)
+
+[Findings](#Findings)
+
+[Recommendations](#Recommendations)
+
+[Conclusion](#Conclusion)
 
 
 #### Project Title: Customer Segmentation for a Subscription Service
+
 #### Project Overview
 This Data Analysis project aims to analyze customer data for a subscription service to identify segments and trends. The goal is to understand customer behaviour, track subscription types, and identify key trends in cancellations and renewals.
 
@@ -84,11 +105,12 @@ Data Visualization
 Analysis:
 - Customer Data was imported to the SQL Server Management Studio
 - Analysis was done on the data with the following queries;
+
 1.Retrieve the total number of customers from each region.
-  ```SQL
+ ```SQL
   SELECT REGION, COUNT(*) AS CUSTOMER_PER_REGION FROM [dbo].[CUSTOMER DATA]
   GROUP BY REGION
-  ```
+ ```
 
 2.Find the most popular subscription type by the number of customers.
  ```SQL
@@ -148,10 +170,11 @@ Data Visualization
 
 
 #### Findings
-- Key insights: - The most popular Subscription Type is Basic
-                - Total number of active subscriptions is 18.61K
-                - Total number of canceled subscriptions is 15.81K
-                - Average subscription duration is 365.35
+- Key insights:
+ 1. The most popular Subscription Type is Basic
+ 2. Total number of active subscriptions is 18.61K
+ 3. Total number of canceled subscriptions is 15.81K
+ 4. Average subscription duration is 365.35
   
 - Trends and Patterns: There is only minimal differnce in the Revenue generated from the subscription types per region
 
@@ -161,7 +184,7 @@ Data Visualization
 - Improve Customer Support: Implement a feedback mechanism for canceled subscriptions to identify specific areas for improvement
  
 #### Conclusion
-This analysis indicates that while this subscription service has an active base of acive customers, there are still a number of canceled subscriptions hence it shows that there is need for improvement in customer engagement and retention startegies. By implementing the recommendations provided, customer satisfaction can be enhanced leading to increased revenue.
+This analysis indicates that while this subscription service has an active base of active customers, there are still a number of canceled subscriptions hence it shows that there is need for improvement in customer engagement and retention startegies. By implementing the recommendations provided, customer satisfaction can be enhanced leading to increased revenue.
 
 
 
