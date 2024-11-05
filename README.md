@@ -64,6 +64,107 @@ number of people with premium		=COUNTIF(Table3[SubscriptionType],D3)
 number of people with standard		=COUNTIF(Table3[SubscriptionType],D5)
 ```
 
+Data Visualization
+- Calculations
+  
+![EXCEL CUSTOMER DATA CALC](https://github.com/user-attachments/assets/3ef155bd-383e-4673-867d-665c76910abb)
+
+- Pivot Tables
+
+![pivot table 4](https://github.com/user-attachments/assets/feb97caa-9ccb-4036-bd58-89233e700d31)
+
+![Pivot table 5](https://github.com/user-attachments/assets/67e522bf-bbbd-4bfe-853b-01ccaf674282)
+
+
+- Bar Charts
+
+![Bar chart Customer Data](https://github.com/user-attachments/assets/435a20ca-f044-4b51-b751-ad0e50b455b6)
+
+##### Analysis Done with SQL
+Analysis:
+- Customer Data was imported to the SQL Server Management Studio
+- Analysis was done on the data with the following queries;
+1.Retrieve the total number of customers from each region.
+  ```SQL
+  SELECT REGION, COUNT(*) AS CUSTOMER_PER_REGION FROM [dbo].[CUSTOMER DATA]
+  GROUP BY REGION
+  ```
+
+2.Find the most popular subscription type by the number of customers.
+ ```SQL
+SELECT SUBSCRIPTIONTYPE, COUNT (*) AS NUMBER_OF_SUBSCRIPTIONS
+FROM [dbo].[CUSTOMER DATA]
+GROUP BY SUBSCRIPTIONTYPE
+ORDER BY COUNT(SUBSCRIPTIONTYPE) DESC
+```
+3.Find customers who canceled their subscription within 6 months.
+```SQL
+SELECT CUSTOMERID
+FROM [dbo].[CUSTOMER DATA]
+WHERE CANCELED = 1
+     AND DATEDIFF(MM,SUBSCRIPTIONSTART,SUBSCRIPTIONEND) <= 6
+```
+4.Calculate the average subscription duration for all customers.
+```SQL
+SELECT AVG(SUBSCRIPTION_DURATION) AS AVERAGE_SUBSCRIPTION_DURATION 
+FROM [dbo].[CUSTOMER DATA]
+OR
+SELECT AVG(DATEDIFF(dd,SUBSCRIPTIONSTART,SUBSCRIPTIONEND)) AS AVERAGE_SUBSCRIPTION_DURATION FROM [dbo].[CUSTOMER DATA]
+```
+5.Find customers with subscriptions longer than 12 months.
+```SQL
+SELECT CUSTOMERID
+FROM [dbo].[CUSTOMER DATA]
+```
+6.Calculate total revenue by subscription type.
+```SQL
+SELECT SUBSCRIPTIONTYPE, SUM(REVENUE) AS TOTAL_REVENUE_BY_SUBSCRIPTIONTYPE
+FROM [dbo].[CUSTOMER DATA]
+```
+7.Find the top 3 regions by subscription cancellations.
+```SQL
+SELECT TOP 3 REGION, COUNT(CANCELED)  AS TOP_3_REGION_BY_SUBSCRIPTION_CANCELLATION 
+FROM [dbo].[CUSTOMER DATA]
+WHERE CANCELED = 1
+GROUP BY REGION
+```
+8.Find the total number of active and canceled subscriptions.
+```SQL
+SELECT CANCELED, COUNT(CANCELED) AS TOTAL_NUMBER_OF_ACTIVE_AND_CANCELED_SUBSCRIPTION
+FROM [dbo].[CUSTOMER DATA]
+GROUP BY CANCELED
+```
+Data Visualization
+
+![SQL Customer Data](https://github.com/user-attachments/assets/19e10dec-d581-411b-8737-6136490b680e)
+
+
+##### Power BI Analysis
+The aim of using Power BI was to create an interactive dashboard which contains the insights found in EXCEL and SQL. The Dashboard visualizes key customer segments, cancellations, and subscription trends. It also includes slicers for interactive analysis.
+
+Data Visualization
+
+![Power Bi customer data](https://github.com/user-attachments/assets/41f7dd1a-826f-4ec0-aa50-321215e16d2c)
+
+
+#### Findings
+- Key insights: - The most popular Subscription Type is Basic
+                - Total number of active subscriptions is 18.61K
+                - Total number of canceled subscriptions is 15.81K
+                - Average subscription duration is 365.35
+  
+- Trends and Patterns: There is only minimal differnce in the Revenue generated from the subscription types per region
+
+#### Recommendations
+- Enhance customer engagement: Implement Personalized recommendations based on user behavior
+- Promote Premium Subscription: Highlight the benefits of Premium Subscription in marketing materials to convert more basic subscribers
+- Improve Customer Support: Implement a feedback mechanism for canceled subscriptions to identify specific areas for improvement
+ 
+#### Conclusion
+This analysis indicates that while this subscription service has an active base of acive customers, there are still a number of canceled subscriptions hence it shows that there is need for improvement in customer engagement and retention startegies. By implementing the recommendations provided, customer satisfaction can be enhanced leading to increased revenue.
+
+
+
 
 
 
