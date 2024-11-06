@@ -176,10 +176,10 @@ Data Visualization
  3. Total number of canceled subscriptions is 15.81K
  4. Average subscription duration is 365.35
   
-- Trends and Patterns: There is only minimal differnce in the Revenue generated from the subscription types per region
+- Trends and Patterns: There is only minimal difference in the Revenue generated from the subscription types per region
 
 #### Recommendations
-- Enhance customer engagement: Implement Personalized recommendations based on user behavior
+- Enhance customer engagement: Implement personalized recommendations based on user behavior
 - Promote Premium Subscription: Highlight the benefits of Premium Subscription in marketing materials to convert more basic subscribers
 - Improve Customer Support: Implement a feedback mechanism for canceled subscriptions to identify specific areas for improvement
  
