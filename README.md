@@ -39,6 +39,9 @@ This Data Analysis project aims to analyze customer data for a subscription serv
 - Identify Trends in Cancellations and Renewals
 - Make data-driven recommendations to improve customer retention and acquisition
 
+#### Data Sources
+The dataset used in this analysis was provided by the incubator Hub
+
 #### Tools Used
 - Microsft
     1. Data Cleaning
@@ -170,18 +173,18 @@ Data Visualization
 
 
 #### Findings
-- Key insights:
+- **Key insights**:
  1. The most popular Subscription Type is Basic
  2. Total number of active subscriptions is 18.61K
  3. Total number of canceled subscriptions is 15.81K
  4. Average subscription duration is 365.35
   
-- Trends and Patterns: There is only minimal difference in the Revenue generated from the subscription types per region
+- **Trends and Patterns**: There is only minimal difference in the Revenue generated from the subscription types per region
 
 #### Recommendations
-- Enhance customer engagement: Implement personalized recommendations based on user behavior
-- Promote Premium Subscription: Highlight the benefits of Premium Subscription in marketing materials to convert more basic subscribers
-- Improve Customer Support: Implement a feedback mechanism for canceled subscriptions to identify specific areas for improvement
+- **Enhance customer engagement**: Implement personalized recommendations based on user behavior
+- **Promote Premium Subscription**: Highlight the benefits of Premium Subscription in marketing materials to convert more basic subscribers
+- **Improve Customer Support**: Implement a feedback mechanism for canceled subscriptions to identify specific areas for improvement
  
 #### Conclusion
 This analysis indicates that while this subscription service has an active base of active customers, there are still a number of canceled subscriptions hence it shows that there is need for improvement in customer engagement and retention startegies. By implementing the recommendations provided, customer satisfaction can be enhanced leading to increased revenue.
